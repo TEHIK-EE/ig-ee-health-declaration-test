@@ -10,5 +10,5 @@ Instance: PatientExample
 InstanceOf: MyPatient
 Description: "An example of a patient with a license to krill."
 * name
-  * given[0] = "Joonas"
-  * family = "Honda"
+  * given[0] = "Tarmo"
+  * family = "Suzuki"

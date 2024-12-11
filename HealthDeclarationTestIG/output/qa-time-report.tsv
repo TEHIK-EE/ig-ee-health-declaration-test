@@ -1,0 +1,6 @@
+Source File	Size	loadResources	load-configure	scan	loadDepInfo	loadInfo	load	generateSnapshots	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	responsesForQuestionnaire	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
+\fsh-generated\resources\ImplementationGuide-ig-ee-healthdeclarationtest.json	2411	-	0	0	0	0	0	0	0	299	0	0	0	0	0	0	0	8	1	0	139	146	0	0	0	0	0	0	1
+fsh-generated/resources/Patient-PatientExample.json	248	31	0	0	0	1	0	0	0	15	0	0	0	0	0	0	0	0	0	0	16	26	0	0	0	0	0	0	0
+fsh-generated/resources/Questionnaire-NaidisKusimustik.json	51137	62	1	0	0	0	0	0	0	219	0	0	0	0	0	0	0	1	0	0	954	328	0	0	0	0	31	0	1
+fsh-generated/resources/StructureDefinition-Kusimustik.json	4413	16	0	0	1	0	0	173	0	93	0	0	16	0	0	0	0	2	0	0	531	12719	0	0	0	0	16	0	2
+fsh-generated/resources/StructureDefinition-MyPatient.json	1275	16	1	0	0	0	0	61	0	47	0	0	0	0	0	0	0	1	0	0	359	4454	0	0	0	0	0	0	3

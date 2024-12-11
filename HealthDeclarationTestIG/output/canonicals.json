@@ -1,0 +1,29 @@
+[
+  {
+    "id" : "ig-ee-healthdeclarationtest",
+    "type" : "ImplementationGuide",
+    "url" : "https://fhir.ee/ImplementationGuide/ig-ee-healthdeclarationtest",
+    "version" : "0.1.0",
+    "name" : "HealthDeclarationTestIG"
+  },
+  {
+    "id" : "NaidisKusimustik",
+    "type" : "Questionnaire",
+    "url" : "https://fhir.ee/Questionnaire/NaidisKusimustik",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "Kusimustik",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.ee/StructureDefinition/Kusimustik",
+    "version" : "0.1.0",
+    "name" : "Kusimustik"
+  },
+  {
+    "id" : "MyPatient",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.ee/StructureDefinition/MyPatient",
+    "version" : "0.1.0",
+    "name" : "MyPatient"
+  }
+]

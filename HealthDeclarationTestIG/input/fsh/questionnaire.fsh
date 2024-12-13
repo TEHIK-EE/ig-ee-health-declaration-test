@@ -1,7 +1,7 @@
-Profile: Kusimustik
+Profile: HDECLQuestionnaire
 Parent: Questionnaire
-Id: Kusimustik
-Description: "esimene katsetus questionnaire ressursiga"
+Id: HDECLQuestionnaire
+Description: "Tervisedeklaratsiooni küsimustiku profiil"
 * ^version = "1.0.0"
 * ^status = #draft
 * ^date = "2024-01-01"
@@ -33,9 +33,9 @@ Description: "esimene katsetus questionnaire ressursiga"
   * type 1..1
   * required 1..1
 
-Instance: NaidisKusimustik
-InstanceOf: Kusimustik
-Description: "Näidis andmestik küsimustikust"
+Instance: ExampleHDECLQuestionnaire
+InstanceOf: HDECLQuestionnaire
+Description: "Näidis tervisedeklaratsiooni andmestik"
 Usage: #example
 * status = #draft
 * approvalDate = "2024-01-01"

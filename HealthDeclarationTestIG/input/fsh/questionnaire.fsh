@@ -1,11 +1,11 @@
-Profile: HDECLQuestionnaire
+Profile: EEHealthDeclaration
 Parent: Questionnaire
-Id: HDECLQuestionnaire
+Id: EEHealthDeclaration
 Description: "Tervisedeklaratsiooni küsimustiku profiil"
 * ^version = "1.0.0"
 * ^status = #draft
 * ^date = "2024-01-01"
-* url 0..0
+* url 1..1
 * versionAlgorithm[x] 0..0
 * derivedFrom 0..0
 * experimental 0..0
@@ -20,7 +20,7 @@ Description: "Tervisedeklaratsiooni küsimustiku profiil"
 * approvalDate 1..1
 * lastReviewDate 1..1
 * effectivePeriod 0..0
-* name = "Tervisedeklaratsiooni küsimustik"
+* name = "HDECL"
 * title = "Tervisedeklaratsiooni küsimustik"
 * description = "Tervisedeklaratsiooni küsimustik"
 * code 1..1
@@ -33,14 +33,17 @@ Description: "Tervisedeklaratsiooni küsimustiku profiil"
   * type 1..1
   * required 1..1
 
-Instance: ExampleHDECLQuestionnaire
-InstanceOf: HDECLQuestionnaire
+Instance: ExampleEEHealthDeclaration
+InstanceOf: EEHealthDeclaration
 Description: "Näidis tervisedeklaratsiooni andmestik"
 Usage: #example
+* url = "http://fhir.ee/StructureDefinition/EEHealthDeclaration"
 * status = #draft
 * approvalDate = "2024-01-01"
 * lastReviewDate = "2025-01-01"
-* code = #100307-8
+* code.system = "http://fhir.ee/CodeSystem/dokumendi-tyyp"
+* code.code = #81
+* code.display = "Tervisedeklaratsioon"
 * item[0].linkId = "1"
 * item[=].prefix = "1"
 * item[=].text = "Elustiil"
@@ -301,6 +304,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].prefix = "4.0.1.1"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-psyyhika"
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 * item[=].item[=].item[=].item[+].linkId = "4.0.1.2"
@@ -446,6 +450,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].prefix = "5.0.1.1"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-narvisusteem"
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 * item[=].item[=].item[=].item[+].linkId = "5.0.1.2"
@@ -591,6 +596,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].prefix = "6.0.1.1"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-silmad-ja-nagemine"
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 * item[=].item[=].item[=].item[+].linkId = "6.0.1.2"
@@ -704,6 +710,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].prefix = "7.0.1.1"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-korv-nina-neel"
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 * item[=].item[=].item[=].item[+].linkId = "7.0.1.2"
@@ -833,6 +840,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].prefix = "8.0.1.1"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-hingamissusteem"
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 * item[=].item[=].item[=].item[+].linkId = "8.0.1.2"
@@ -930,6 +938,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].prefix = "9.0.1.1"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-ainevahetuse-haired"
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 * item[=].item[=].item[=].item[+].linkId = "9.0.1.2"
@@ -995,6 +1004,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].prefix = "10.0.1.1"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-suda-ja-veresoonkond"
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 * item[=].item[=].item[=].item[+].linkId = "10.0.1.2"
@@ -1156,6 +1166,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].prefix = "11.0.1.1"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-luud-liigesed-ja-lihased"
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 * item[=].item[=].item[=].item[+].linkId = "11.0.1.2"
@@ -1333,6 +1344,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].prefix = "12.0.1.1"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-nakkushaigused"
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 * item[=].item[=].item[=].item[+].linkId = "12.0.1.2"
